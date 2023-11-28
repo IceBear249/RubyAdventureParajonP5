@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController2 : MonoBehaviour
 {
     public float speed;
     public bool vertical;
@@ -40,15 +40,15 @@ public class EnemyController : MonoBehaviour
 
         if (vertical)
         {
+            position.y = position.y + Time.deltaTime * speed * direction; ;
             animator.SetFloat("Move X", 0);
             animator.SetFloat("Move Y", direction);
-            position.y = position.y + Time.deltaTime * speed * direction; ;
         }
         else
         {
+            position.x = position.x + Time.deltaTime * speed * direction; ;
             animator.SetFloat("Move X", direction);
             animator.SetFloat("Move Y", 0);
-            position.x = position.x + Time.deltaTime * speed * direction; ;
         }
         
         rigidbody2D.MovePosition(position);
