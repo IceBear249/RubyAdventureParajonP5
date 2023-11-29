@@ -8,6 +8,7 @@ public class EnemyController2 : MonoBehaviour
     public float speed;
     public bool vertical;
     public float changeTime = 3.0f;
+    bool broken;
 
     Rigidbody2D rigidbody2D;
     float timer;
@@ -61,5 +62,11 @@ public class EnemyController2 : MonoBehaviour
         {
             player.ChangeHealth(-1);
         }
+    }
+    //Public because we want to call it from elsewhere like the projectile script
+    public void Fix()
+    {
+        broken = false;
+        rigidbody2D.simulated = false;
     }
 }
