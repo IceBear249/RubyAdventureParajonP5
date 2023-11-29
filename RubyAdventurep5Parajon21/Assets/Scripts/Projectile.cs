@@ -16,16 +16,7 @@ public class Projectile : MonoBehaviour
     {
         rigidbody2d.AddForce(direction * force);
     }
-   void OnCollisionEnter2D(Collision2D other)
-    {
-      EnemyController2 e = other.collider.GetComponent<EnemyController2>();
-        if (e !=null)
-        {
-            e.Fix();
-        }
-
-        Destroy(gameObject);
-    }
+  
     // Update is called once per frame
     void Update()
     {
@@ -34,5 +25,15 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        EnemyController2 e = other.collider.GetComponent<EnemyController2>();
+        if (e != null)
+        {
+            e.Fix();
+        }
+
+        Destroy(gameObject);
     }
 }
