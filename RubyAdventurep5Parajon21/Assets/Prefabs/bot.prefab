@@ -197,6 +197,7 @@ MonoBehaviour:
   speed: 7
   vertical: 0
   changeTime: 3
+  smokeEffect: {fileID: 7353618243847888139}
 --- !u!1001 &7905679019558039191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,11 +208,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 125044549207683712, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 125044549207683712, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 125044549207683712, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
       propertyPath: m_LocalPosition.z
@@ -245,6 +246,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 845500227864589212, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1589691613433245984, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
       propertyPath: m_Name
       value: Particle System
@@ -254,6 +259,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
+--- !u!198 &7353618243847888139 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 845500227864589212, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
+  m_PrefabInstance: {fileID: 7905679019558039191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7785213526131121175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 125044549207683712, guid: 17f5d8940bfb82b4087ac62a56fcfe44, type: 3}
