@@ -27,15 +27,21 @@ public class RubyController : MonoBehaviour
     //Start is called before the first frame update
     Animator animator;
     Vector2 lookDirection = new Vector2(1, 0);
-    
+
+    AudioSource audioSource;
+
     void Start()
     {       
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
         currentHealth = maxHealth;  
+
+        audioSource = GetComponent<AudioSource>();
+ 
     }
     // Update is called once per frame
+
+    
     void Update()
     {
 
@@ -115,6 +121,13 @@ public class RubyController : MonoBehaviour
 
         animator.SetTrigger("Launch");
     }
+
+    public void PlaySound(AudioClip audioClip)
+    {
+        audioSource.PlayOneShot(audioClip);
+      
+    }
+   
 } 
 
 
